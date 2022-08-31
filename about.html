@@ -1,263 +1,118 @@
-body {
-  margin: 0; /* Tum sayfadaki dıs boslukları 0 yapar*/
-  padding: 0; /* Tum sayfadaki ic boslukları 0 yapar*/
-  box-sizing: border-box; /* divlerin boyu hesaplanırken borderlarıda hesaba katar*/
-  font-family: "Finlandica", sans-serif; /* Tum sayfadaki kullanılan yazı fonutunu belirler*/
-}
-#navbar-container {
-  padding: 0 100px; /*Yukarıdan ve asagıdan 0px, sag ve soldan 100px bosluk verir  */
-  display: flex; /*Bu ozellik ile divler esnek kutu ozelliği kazanır ve elemanlar sayfada yan yana dizilir*/
-  justify-content: space-between; /* flex ile beraber kullanılır ve elemanların sayfada saga sola yaslanmasını saglar*/
-  border-bottom: 1px solid rgb(153, 148, 148); /*1px lik alt border olusturur */
-  color: #000000;
-  font-weight: bold;
-  font-family: "Finlandica", sans-serif;
-  font-size: 1em;
-}
-ul {
-  display: flex; /**liste yi flex yapar ve elamanlarını yan yana dizer */
-  list-style: none; /*liste elemanlarının yanındaki nokta isaretlerini kaldırır */
-}
-ul li {
-  margin-right: 30px; /* sagdan 30px dıs bosluk verir*/
-  font-size: 16px; /*yazı boyutunu 20 px yapar */
-  font-weight: bold; /*Yazıyı kalın yapar */
-  color: #a13333; /*yazının rengini ayarlar */
-}
-ul li:hover {
-  /*Burada yazı uzerine gelinince ne olacagı belirliyoruz*/
-  cursor: pointer; /*Yazı uzerine gelince el isareti cıkar*/
-  color: #4886cc; /* yazı rengi kırmızı olur*/
-}
-/*Ders 2 Baslangıc*/
-#navigasyon {
-  display: flex;
-}
-#login-btn {
-  margin: 10px 10px;
-  background-color: #a13333;
-  color: white;
-  padding: 6px 36px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: "Finlandica", sans-serif;
-  font-weight: bold;
-}
-#login-btn:hover {
-  cursor: pointer;
-  background-color: #4886cc;
-  transition: 1s;
-}
-#hero-container {
-  height: 100vh;
-  background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),
-    url("https://www.habegger.ch/content/uploads/2020/04/studio-hag-105-hd.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  display: flex;
-  justify-content: center;
-  
-}
-li>i{
-  margin-right: 10px;
-}
-button>i{
-  margin-left: 10px;
-}
-#hero-container>div{
-  margin-top: 10%;
-  width: 75%;
-  text-align: center;
-}
-#get-started{
-  border: none;
-  padding: 1em 2em;
-  color: #a13333;
-  font-weight: bold;
-  font-family: "Finlandica", sans-serif;
-  font-size: 1em;
-  border-radius: 6px;
-}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@1,400;1,500&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+        <title>Document</title>
+      </head>
+    <div id="navbar-container">
+        <!--Navbar icindeki site logosu-->
+        <div>
+          <p>My Web Site</p>
+        </div>
+        <div id="navigasyon">
+          <!--Navbar icerisindeki Tıklanacak olan menuler baslangıc-->
+          <ul>
+            <li><i class="fa-solid fa-house"></i>  <a href="./index.html">Home</a></li>
+            <li><i class="fa-solid fa-compass-drafting"></i><a href="./about.html"> About</a> </li>
+            <li><i class="fa-brands fa-product-hunt"></i>Product</li>
+            <li><i class="fa-brands fa-phoenix-framework"></i>Contact</li>
+          </ul>
+          <!--Navbar icerisindeki Tıklanacak olan menuler bitis-->
+          <button id="login-btn">
+            Login <i class="fa-solid fa-right-to-bracket"></i>
+          </button>
+        </div>
+      </div>
+      <div id="about-container">        
+          <h1 id="title">ABOUT US</h1>         
+      </div>
+      
+      <div id="services">
+        <div class="servis-title">
+          <h2>How We Begin</h2>
+          <hr />
+        </div>
+      </div>
+      
+      <div id="about-info">
+        <div id="image-about">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" srcset="">
 
-#get-started:hover{
-  background-color: #4886cc;
-  color: white;
-  transition: 0.5s;
-}
+        </div>
+        <div id="text-about">
+           <p> <strong> ipsum dolor,</strong> sit amet consectetur adipisicing elit. 
+            Tenetur, reprehenderit quam nesciunt eligendi nostrum illum voluptate explicabo recusandae!
+             Maiores laborum minima nostrum modi amet quis tenetur itaque deserunt consectetur nemo temporibus
+              quibusdam soluta at sequi dicta blanditiis id nisi quasi, atque possimus pariatur nesciunt nobis?<br>
+               Ab laborum et vitae in quidem pariatur fugiat error consequuntur! Dolores hic ex repellendus ratione.
+                Optio recusandae maxime quas praesentium expedita in enim atque corrupti, doloribus magnam
+                 exercitationem libero esse nesciunt rem nemo modi, aperiam, hic eum quae quasi quo quibusdam? 
+                 Impedit non exercitationem nobis perspiciatis maiores accusamus maxime ut expedita amet 
+                 necessitatibus! Voluptatem, est.
+                </p>
+        </div>
+      </div>
+      <div id="services">
+        <div class="servis-title">
+          <h2>The Team</h2>
+          <hr />
+        </div>
+      </div>
 
-#servis-title {
-  margin-top: 5%;
-  text-align: center;
-}
+      <div id="team-container">
+        <div class="team-box">
+          <img class="person-image" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" srcset="">
+          <h5>Ahmet Can</h5>
+          <p class="person-p">Lead Engineer</p>
+          <i class="fa-brands fa-facebook fa-2x"></i>
+          <i class="fa-brands fa-twitter fa-2x"></i>        
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </div>
+        <div class="team-box">
+          <img class="person-image" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80" alt="" srcset="">
+          <h5>Ayse Can</h5>
+          <p class="person-p">Lead Designer</p>
+          <i class="fa-brands fa-facebook fa-2x"></i>
+          <i class="fa-brands fa-twitter fa-2x"></i>        
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </div>
+        <div class="team-box">
+          <img class="person-image" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" srcset="">
+          <h5>Ali Can</h5>
+          <p class="person-p">Lead Arhictect</p>
+          <i class="fa-brands fa-facebook fa-2x"></i>
+          <i class="fa-brands fa-twitter fa-2x"></i>        
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </div>
+      </div>
+      <div id="footer">
+        <div id="footer-icons">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+          <i class="fa-brands fa-twitter fa-2x"></i>        
+          <i class="fa-brands fa-instagram fa-2x"></i>
+          <i class="fa-brands fa-youtube fa-2x"></i>
+          <p id="p-copy"><i class="fa-solid fa-copyright"></i>Skytech Yazılım 2022<i class="fa-solid fa-copyright"></i></p>
+        </div>
+       
+      </div>
+</body>
+</html>
 
-hr {
-  width: 10%;
-  border: 0;
-  height: 3px;
-  background-image: linear-gradient(
-    to right,
-    rgba(209, 93, 93, 0.781),
-    rgba(190, 15, 15, 0.75),
-    rgba(209, 93, 93, 0.781)
-  );
-}
-#services-box{
-  padding: 5% 7.5% ;
-  display: flex;
-  justify-content: center;
-}
-.service-info{
-  text-align: center;
-  border: 1px solid rgb(168, 144, 144);
-  margin: 0% 1rem;
-  padding: 2rem 1rem 1rem 1rem;  
- -webkit-box-shadow: 2px 4px 15px -1px rgba(0,0,0,0.89); 
- box-shadow: 2px 4px 15px -1px rgba(0,0,0,0.89);  
-}
-.service-info>h4{
-  color: #4886cc;
-}
-.service-info>i{
-  color: #a13333;
-}
-
-
-#slogan {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  color: white;
-  padding: 4rem;
-  background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),
-    url("https://images.unsplash.com/photo-1659355863869-0c4f73b6d184?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#slogan-text {
-  width: 50%;
-}
-
-#slider-info{
-  padding: 5% 7.5%;
-  display: flex;
-  justify-content:space-around;
-}
-
-#feature-info{
-  max-width: 50%;
-}
-
-.info-grup{
-  display: flex; 
-  line-height: 50%; 
-}
-.info-grup>i{
-  margin-right: 2rem;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  color: #a13333;
-}
-.info-grup>div>h3{
-  color:#4886cc;
-}
-
-
-#footer{
-  background-color: #a13333;
-  color: white;
-  display: flex;
-  justify-content: center;
-  padding: 5%;
-}
-#footer-icons{
-  width: 50%;
-  text-align: center;
-/*   margin: 5% ;*/
-}
-#footer-icons>i{
-  margin: 10px 5%;
-}
-#footer-icons>i:hover{
-  color: #4886cc;
-  cursor: pointer;
-  transition: 1s;
-}
-.fa-copyright{
-  margin: 10px;
-}
-a:link {
-  text-decoration: none;
-  color: #193c40;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #193c40;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #2e5902;
-}
-#about-container {
-  height: 30vh;
-  background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),
-    url("https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  display: flex;
-  justify-content: center;
-}
-#about-container>h1{
-  text-align: center;
-  margin-top: 5%;
-}
-
-#about-info{
-  margin: 5% 7.5%;
-  background-color: #193c40;
-  display: flex;
-  justify-content: center;
-}
-#image-about{
-  width: 50%;
-}
-#image-about>img{
-  width: 100%;
-}
-#text-about{
-  color: white;
-  width: 50%;
-  padding:  5% ;
-  font-size: 14px;
-}
-
-.person-image{
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-#team-container{
-  margin: 5% 7.5%;
-  display: flex;
-  justify-content: space-between;
-}
-.team-box{
-  text-align: center;
-  -webkit-box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #0011ff, 0px 0px 10px 10px rgba(0,0,0,0.5); 
-box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #ffe600, 0px 0px 10px 10px rgba(0,0,0,0.5);
-  
-}
-.person-p{
-  color: gray;
-}
-.team-box>i{
-  margin: 0 20px;
-}
